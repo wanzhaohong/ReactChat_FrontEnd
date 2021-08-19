@@ -1,6 +1,6 @@
 # The whole project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
+Front-end: https://github.com/wanzhaohong/ReactChat_FrontEnd
+Back-End API: https://github.com/wanzhaohong/ReactChat_BackEnd_NodeAPI
+Socket.io Server: https://github.com/wanzhaohong/ReactChat_BackEnd_SocketServer
 
