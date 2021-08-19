@@ -1,0 +1,27 @@
+
+.roomOutterContainer {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  align-items: center;
+  background-color: #bde7d6;
+}
+
+.roomInut {
+  border-radius: 5px;
+  padding: 15px 20px;
+  width: 100%;
+}
+
+.roombutton {
+    color: #fff !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #14c27a;
+    padding: 20px;
+    border-radius: 5px;
+    display: inline-block;
+    border: none;
+    width: 30%;
+}

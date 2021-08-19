@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useContext} from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import { BrowserRouter as Router, Route} from 'react-router-dom';
+
+//Pages
+import Join from './components/Join/Join';
+import Chat from './components/Chat/Chat';
+import Register from './components/Register/Register';
+import Room from './components/Room/Room';
+
+import {AuthContext} from './context/AuthContext';
+
+
+const App = () => {
+
+    const { user } = useContext(AuthContext);
+
+    return(
+        <Router>
+            <Route path="/" exact>
+                {user ? <Room /> : <Join />}
+            </Route>
+
+            {/* test case if the new registered one will replace the old one */}
+            <Route path="/register">
+                {user ? <Room /> : <Register />}
+            </Route>
+
+            <Route path="/chat">
+                {user ? <Chat /> : <Join />}
+            </Route>
+
+        </Router>
+    );
 }
 
 export default App;
